@@ -1,0 +1,325 @@
+*{
+    /*Los 3 son margenes en general o formas de espaciado entre los bordes de la página */ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*Tamaño de letra, el parametro 100% para su tamaño original*/
+    font-size: 100%;
+    /*Alineación respecto a la parte superior-media-inferior, un ejemplo es lo q sale en el excel*/ 
+    vertical-align: baseline;
+}
+body{
+    /*Para cambiar la familia de la fuente: "times new roman", "calibri",etc*/
+    font-family: sans-serif;
+    /*Alinear el texto en el centro*/
+    text-align: center;
+
+}
+.head{
+    /* Define un modelo flexible en una caja para ser acomodada*/ 
+    display: flex;
+    /*Distribuir el espacio de los flex alrededor el contenido central*/
+    justify-content: space-between;
+    /*Alinear objetos en general al centro*/
+    align-items: center;
+    /*Altura*/
+    height:65px;
+    /*Color de fondo de pantalla*/
+    background-color: rgb(54, 56, 77);
+    /*Para mantenerse estático si usamos el scroll del mouse */ 
+    position: fixed;
+    /*Para que se superponga a los demas elementos */ 
+    z-index: 100;
+    /*Ancho*/
+    width: 100%;
+}
+.navbar{
+    /* Define un modelo flexible en una caja para ser acomodada*/ 
+    display: flex;
+    /*Espaciado que empuja la palabra Experiencia a la izquierda*/ 
+    margin-right: 10px;
+}
+.logo{
+    /*Empuja el logo de la parte superior hacia la derecha*/
+    margin-left: 30px;
+}
+/*Para definir el tamaño pequeño del logo en la navbar*/
+.logo > a >img{
+  width: 50px;
+  height: 50px;
+}
+.navbar > a{
+    /*Se genera un cuadro a manera de bloque*/ 
+    display: block;
+    /*Espaciado entre objetos, los numeros corresponden respectivamente a:
+     padding-bottom(abajo), padding-left(izquierda),padding-right(derecha),padding-top(arriba)*/
+    padding:20px 20px;
+    /*Transforma el texto a mayuscula*/
+    text-transform: uppercase;
+    /*Quitar cosas como el subrayado en el caso de los vinculos del navbar*/
+    text-decoration: none;
+    /*Cambiar el color de letra*/
+    color: white;
+}
+/*HOVER: Interacción cuando el mouse se sobrepone a un elemnto*/
+.navbar >a:hover{
+    /*Cambia el fondo a un color blanco en el pequeño rectangulo*/
+    background-color: rgb(255, 255, 255);
+    /*Cambia el color de letra de los elementos de la navbar*/
+    color:black
+}
+/*Lo que está dentro de la primera imagen*/
+.content_header {
+    /* Define un modelo flexible en una caja para ser acomodada*/  
+    display: flex;
+    /*Altura*/
+    height: 60vh;
+    /*Distribuir el espacio de los flex alrededor el contenido central*/
+    justify-content: center;
+    /*Centra todos los objetos pertenecientes a esta division*/
+    align-items: center;
+    /*Coloca una imagen de fondo*/
+    background-image: url(https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    /*Ajusta el tamaño de la imagen al de la pantalla*/
+    background-size: cover;
+    /*Fija la imagen como quieta, cuando use el scroll se verá igual*/
+    background-attachment: scroll;
+    /*Define la posición inicial de la imagen de fondo*/
+    background-position: center;
+    /*Genera un espaciado entre elemntos de la parte superior
+    (en este caso que "agencia de empleos" se ponga mas abajo)*/
+    padding-top: 100px;
+}
+
+.title{
+    /*Definir el tamaño de los títulos: Agencia de empleos,nuestro valores,nosotros,etc*/
+    font-size: 50px;
+    /*Transformación del texto a mayúsucula*/
+    text-transform: uppercase;
+    /*Color de texto de estos títulos*/
+    color: rgb(44, 43, 43);
+    /*Espaciado entre elementos por la parte inferior*/
+    margin-bottom: 35px;
+}
+p{
+    /*Espaciado en la parte inferior*/
+    margin-bottom: 42px;
+    /*Tamaño de letra de los parrafos*/
+    font-size: 19px;
+    /*Color de letra de los parrafos*/
+    color: rgb(255, 255, 255);
+    /*Espaciado entre objetos, los numeros corresponden respectivamente a:
+     padding-bottom(abajo), padding-left(izquierda),padding-right(derecha),padding-top(arriba)*/
+    padding: 0 140px;
+}
+.btn{
+    /*Genera más cuadros en la linea */
+    display: inline-block;
+    /*margen en la parte superior*/
+    margin-top: 15px;
+    /*Espaciado entre objetos, los numeros corresponden respectivamente a:
+     padding-bottom(abajo), padding-left(izquierda),padding-right(derecha),padding-top(arriba)*/
+    padding: 10px 40px;
+    /*Quitar cosas como el subrayado en el caso de los vinculos de los botones*/
+    text-decoration: none;
+    /*Color de fondo de los botones*/
+    background-color: rgb(83, 54, 75);
+    /*El borde rectangular del botón*/
+    border: 2px solid rgb(83, 54, 75);
+    /*La curva que tendrá en las esquinas, anteriormente era un rectangulo*/
+    border-radius: 25vh;
+    /*Color de letra del texto dentro del boton*/
+    color: white;    
+}
+/*HOVER: Interacción cuando el mouse se sobrepone a un elemnto*/
+.btn:hover{
+    /*Quita el color de fondo y deja los bordes ya establecidos anteriormente en "border"*/
+    background: none;
+}
+.content_header{
+    /*Altura en viewport Height(vh): Altura visible dentro de la pantalla*/
+    height:50vh;
+    /* Define un modelo flexible en una caja para ser acomodada*/  
+    display: flex;
+    /*Indica el orden en el que se coloca los objetos de display:flex, en este caso a manera de columna*/
+    flex-direction: column;
+}
+.sau{
+    /*Espaciado entre objetos, los numeros corresponden respectivamente a:
+     padding-bottom(abajo), padding-left(izquierda),padding-right(derecha),padding-top(arriba)*/
+    padding: 50px 0;
+    /*Color de fondo del bloque de texto "Nuestros Valores"*/
+    background-color: rgb(73, 76, 116);
+}
+/*Acá empiezan las tarjetas de "Pasion por aprender", "Compromiso", "Flexibilidad"*/
+.box_container{
+    /* Define un modelo flexible en una caja para ser acomodada*/  
+    display: flex;
+    /*Distribuir el espacio de los flex alrededor el contenido central*/
+    justify-content: center;
+    /*Alinea el texto centrandolo*/
+    text-align: center;
+}
+/*Diseño de las tres"tarjetas*/
+.box_container .box{
+    /*Ancho de la tarjeta para que quepa el texto */
+    width: 650px;
+    /*Altura ajustable a la pantalla*/
+    height: auto;
+    /*Color de fondo*/
+    background: rgba(0, 0, 0, 0.534);
+    /*Bordeado de las tarjetas*/
+    border-radius: 20px;
+    /*Pequeña sombra que se indica al final de la etiqueta, poco notoria*/
+    box-shadow: 0 5px 5px rgba(0 ,0 ,0 , .7);
+    /*Margen de la tarjeta, sigue la estructura de padding en cuanto a orden:bottom-left-right-top*/
+    margin:20px
+}
+
+/*Modificar el título de las cajas: pasion por aprender, compromiso y flfex*/
+.box_container .box >h3{
+    /*Definir el tamaño de Pasion por aprender,Compromiso y Flexibilidad*/
+    font-size: 20px;
+    /*Cambia el color de estos subtitulos*/
+    color: rgb(90, 91, 92);
+    /*Espaciado entre los titutlos de las tarjetas*/
+    padding-top: 10px;
+    /*Margenes superiores de los títulos*/
+    margin-top: 15px;
+}
+/*Contenido textual de la tarjeta*/
+.box_container .box >p{
+    /*3 Separaciones vertical,derecha e izquierda del texto, con la intención de centrarlos al gusto*/
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*Tamaño del texto*/
+    font-size: 18px;
+}
+/*Apartado de "Somos grupo Tawa"*/
+.tawa{
+    /*Para el color de fondo+imagen*/
+    background: linear-gradient(to right, hwb(40 51% 13% / 0.219), #a8a880ab), url(https://fpp.org.pe/wp-content/uploads/2022/02/empelo.jpg) no-repeat center;
+    /*Para que la imagen cubra el espacio de la pantalla*/
+    background-size: cover;
+    /*La imagen no se mueve, cuando uso el scroll del mouse se ve dinámica*/
+    background-attachment: fixed;
+    /*Alineación del texto al centro*/
+    text-align: center;
+    /*3 Separaciones a la izquierda,derecha y arriba del texto*/
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 15px;
+}
+/*Para el boton de Tawa*/
+#btn{
+    /*Para separa el boton de la parte inferior, donde comienza el fondo negro, sin este estarian pegados*/
+    margin-bottom: 25px;
+}
+/*Apartado de Nosotros*/
+.about{
+    /*Color de fondo de la division*/
+    background: rgb(20, 21, 22);
+    /*Espaciado entre objetos, los numeros corresponden respectivamente a:
+     padding-bottom(abajo), padding-left(izquierda),padding-right(derecha),padding-top(arriba)*/
+    padding: 50px 0;
+}
+/*Sección general y orden de las 3 tarjetas de representantes*/
+.box_container2{
+    /* Define un modelo flexible en una caja para ser acomodada*/  
+    display:flex;
+    /*Distribuir el espacio de los flex alrededor el contenido central*/
+    justify-content: center;
+    /*Define la dirección en la que se apilan u ordenan los elementos*/
+    flex-wrap: wrap;
+    /*Separación entre objetos de la parte superior*/
+    padding-top: 50px;
+}
+/*Diseño de las tarjetas*/
+.box_container2 .box{
+    /*Ancho en el que cabe la info*/
+    width: 280px;
+    /*Espaciado en la parte inferior*/
+    padding-bottom: 30px;
+    /*Alineación del texto al centro*/
+    text-align: center;
+    /*Altura de la tarjeta*/
+    height: 190px;
+    /*Color de fondo de la tarjeta*/
+    background:rgba(55, 55, 80, 0.801);
+    /*Curva de la tarjeta*/
+    border-radius: 20px;
+    /*Sombra de la tarjeta*/
+    box-shadow: 0 5px 5px rgba(223, 178, 178, .4);
+    /*Margen de la tarjeta, sigue la estructura de padding en cuanto a orden:bottom-left-right-top*/
+    margin:20px 20px;
+}
+/*Estilos de la foto de los representantes de la tarjeta*/
+.box_container2 .box img{
+    /*Altura y ancho iguales como un cuadrado*/
+    height: 100px;
+    width: 100px;
+    /*Se reajusta a la dimensión adecuada en la extensión interna de la imagen*/
+    object-fit: cover;
+    /*El 50% del borde transforma la imagen cuadrada en un circulo*/
+    border-radius: 50%;
+    /*Saca de la posicion interna a la tarjeta y la posiciona en el borde de esta,
+     mayores valores podrian sacarlo por completo*/
+    margin-top: -30px;  
+    /*Grosor, definición de "dureza" del bordo y su color*/
+    border: 6px solid #10075f;
+}
+/*Para el texto dentro de la tarjeta*/
+.box_container2 .box>p{
+    /*Tamaño de letra*/
+    font-size: 10px;
+    /*Espaciado en general*/
+    padding: 0;
+}
+/*Apartado final de contacto*/
+.contact{
+    /*Esppaciado*/
+    padding: 50px 0;
+    /*Color de fondo*/
+    background-color: rgb(54, 56, 77);
+}
+/*Contenedor general de elementos de contact*/
+.footer-section{
+    /*Acomodar de forma horizontal los elemenos de las 4 divisiones*/
+    display: flex;
+}
+/*La primera y segunda division de elementos de enlaces(aun no trabajables) */
+.f-enlaces{
+    display: flex;
+    flex-direction: column;
+    margin:0 100px;
+}
+/*Los textos hipervinculos de Inicio, Nosotros,etc*/
+.f-enlaces >a{
+    /*Elimina la decoración de textos hipervinculos predeterminada*/
+    text-decoration: none;
+    /*Color de los vínculos*/
+    color: white;
+    /*Separación de elementos por la parte superior*/
+    margin-top: 25px;
+}
+/*Hover de los textos hipervinculos*/
+.f-enlaces>a:hover{
+    /*Cambio de color a negro*/
+    color: black;
+}
+/*ID para definir un elemento en específico*/
+#actual{
+    /*Establecer el color fijo a este texto hipervinculo definido en el html*/
+    color: aquamarine;
+}
+/*Hover para el texto hipervinculo*/
+#actual:hover{
+    /*Cambio de color a negro*/
+    color:black;    
+}
+/*Para el mapa, ha sido extraido de google maps, en compartir para html*/
+figure>iframe{
+    /*Borde para que no se vea rectangular*/
+    border-radius: 4%;
+}
